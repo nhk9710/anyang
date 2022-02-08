@@ -1,0 +1,108 @@
+.wrap{ width: 100%; height: 100%; margin: 0 auto; }
+.header{ width: 100%;  margin: 0 auto; }
+.header .upHeaderFirst > li:after{ content: "  ·";}
+.header .upHeaderFirst > li:last-child{ color: #0056ff}
+.header .upHeaderFirst > li:last-child:after{ content: "∨"; }
+.header .upHeaderSecond > li:after{ content: "·";}
+.header .upHeaderSecond > li:last-child:after{ content: "∨"}
+
+
+.upHeader{ display: flex; justify-content: space-between; margin: 0 auto; margin-top: 10px; max-width: 1220px; }
+.upHeader > nav > ul > li{ float: left; color: grey; margin-right: 5px; font-size: 0.9em; }
+
+
+.downHeader{ border-top: 1px solid #dbdbdb; margin-top: 10px; margin-bottom: 20px; }
+.downNav{ max-width: 1220px; margin: 0 auto; margin-top: 20px; display: flex; justify-content: space-between }
+.downNav > div{ display: flex; justify-content: space-around;  align-items: center; }
+.downNav > div > h5{ margin-right: 60px; font-size: 1.3em; }
+
+.oftenMenu{ background-color: #f3f4f8; }
+.oftenNav{ max-width: 1220px; margin: 0 auto; display: flex; justify-content: flex-start; align-items: center}
+.oftenNav > div{ margin-right: 50px; margin-top: 20px; text-align: center; margin-bottom: 30px; }
+.oftenNav > div > p{ font-size: 0.7em; font-weight: bolder }
+.oftenNav > div > div{ border: 1px solid white; padding: 28px; border-radius: 50px; background-color: white; margin-bottom: 10px; }
+.oftenNav > h3{ font-size: 1.4em; font-weight: bolder; margin-right: 20px; line-height: 30px; }
+.oftenNav > h3:after{content:''; position: absolute; width: 20px; height: 2px; top: 230px; left: 345px; background-color: #3d72fc; }
+.oftenNav > div:hover > div> i{  color: white; transform: rotateY(360deg); transition: all 0.3s linear; }
+.oftenNav > div:hover > div{ background-color: #0056ff }
+.oftenNav > div:nth-child(2):hover > div{ background-color: #f02769 }
+
+.middleContent{ max-width: 1220px; margin: 0 auto; margin-top: 40px; display: flex; justify-content: space-between;}
+.middleContent > img{ border-radius: 10px; }
+.middleRight{ width: 400px; }
+.middleRight > div:first-child{ display: flex; border: 3px solid #0613cc; border-radius: 10px; padding: 10px; justify-content: space-between; }
+/*.middleRight > div:nth-child(2){ display: flex; }*/
+.middleRight > div > input{ padding: 10px; color: grey; font-size: 1em; }
+.middleRight > div > i{ font-size: 2em; color: #0056ff; }
+
+.hashtagSlide{ display: flex; align-items: center; justify-content: space-between }
+.hashtagSlide > div > i{ font-size: 2em; color: #0056ff; }
+.hashtagText div b:after{ content: "|"; margin-left: 10px; color: #dbdbdb; }
+.hashtagText div b{ color: grey }
+
+.daeho{ height: 278px; overflow: hidden; position: relative; margin-top: 23px; border-radius: 10px; background-color: #f5f6fa; }
+.daeho:before{ content: ""; bottom: -4px; right: -10px; position: absolute; width: 283px; height: 244px; background: url(../img/chief_img.jpg) no-repeat; background-size: contain; z-index: 1; }
+.daehoWrap{ margin-left: 20px; margin-top: 20px; }
+.daehoName{ font-size: 1.5em; font-weight: bolder; }
+.daehoSns{ position: absolute; left: 0; bottom: 0; width: 100%; height: 50px; padding: 10px 20px; background-color: #3673c9; font-size: 0; line-height: 0; box-sizing: border-box; }
+.daehoList > li{ float: left; width: 100px; height: 50px;  }
+
+.noticeTab{ max-width: 1220px; margin: 0 auto; }
+ul.tabs{ margin: 0; padding: 0; list-style: none; }
+ul.tabs li{ background: none; display: inline-block; padding: 10px 15px; cursor: pointer; font-size: 1.5em; margin-right: 30px; }
+ul.tabs li:hover{ font-weight: bolder; border-bottom: 2px solid #0056ff; }
+ul.tabs li.current{ font-weight: bolder; border-bottom: 2px solid #0056ff; }
+.tabWrap{ display: flex; justify-content: space-between; align-items: center; margin-top: 30px; border-bottom: 1px solid #dbdbdb }
+.tabWrap p{ color: #0056ff }
+.tab-content{ display: none; margin-top: 20px; }
+.tab-content.current{ display: inherit; display: flex; justify-content: space-between; flex-wrap: wrap; }
+.contentBox{ display: flex; justify-content: space-between; flex-wrap: wrap; overflow: hidden; align-content: center; }
+.contents{ border: 1px solid #dbdbdb; padding: 30px; margin-bottom: 20px; flex: 1 1 15%; margin-right: 20px; border-radius: 10px; line-height: 25px; }
+.contents em{ float: right; color: grey; margin-top: 20px; }
+.contents:hover{ cursor: pointer; border: 1px solid #0056ff; box-shadow: 5px 5px 5px 5px #dbdbdb }
+.contents:nth-child(4){ margin-right: 0; }
+.contents:nth-child(8){ margin-right: 0; }
+
+.coronaTab{ background-color: #f1f8ff; margin-top: 20px; padding-top: 30px; padding-bottom: 30px; }
+.coronaWrap{ max-width: 1220px; margin: 0 auto; }
+.coronaTitle{ display: flex; justify-content: space-between; margin-top: 30px; align-items: center; }
+.coronaTitle h1{ font-size: 2em; font-weight: bolder; margin-right: 20px; }
+.coronaTitle h1 span{ font-size: 1em; font-weight: bolder; color:#f02769;  }
+.coronaTitle p{ color: grey }
+.coronaTitle div{ display: flex; align-items: center; }
+.coronaTitle > div > i{ border: 1px solid white; background-color: white; margin-left: 10px; padding: 5px; border-radius: 5px; }
+.coronaTitle > div > i:hover{ border: 1px solid #0056ff; color: #0056ff }
+.coronaTable{ display: flex; justify-content: space-between; margin-top: 30px; width: 100%; }
+.coronaAlarm{ display: flex; width: 48%; justify-content: space-between; border: 1px solid #f6dae3; background-color: #fdf6fa; border-radius: 10px; border-top-left-radius: 20px; overflow: hidden; align-items: center; }
+.coronaAlarm > h3{ writing-mode: vertical-rl; text-orientation: upright; font-size: 1.8em;left: 0; margin: 0; padding: 30px; color: #f02769; background-color: white; }
+.coronaAlarm section{ margin: 10px; height: 100%; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center}
+.coronaAlarm section p:nth-child(2):before{ content:''; position: absolute; width: 10px; height: 2px; top: 1390px; left: 506px; background-color: #f02769; }
+.coronaAlarm section p:nth-child(3):before{ content:''; position: absolute; width: 10px; height: 2px; top: 1390px; left: 630px; background-color: rebeccapurple; }
+.coronaAlarm section p:nth-child(4):before{ content:''; position: absolute; width: 10px; height: 2px; top: 1390px; left: 700px; background-color: #0056ff; }
+.coronaAlarm section p:nth-child(5):before{ content:''; position: absolute; width: 10px; height: 2px; top: 1390px; left: 806px; background-color: #f02769; }
+.coronaAlarm section p:nth-child(2){ font-size: 1.3em; font-weight: bolder; }
+
+
+.hashTag{ max-width: 1220px; width: 100%; margin: 0 auto; margin-top: 30px; margin-bottom: 30px; }
+.hashTab{ max-width: 1220px; display: flex; margin: 0 auto; }
+ul.hashTabs{ margin: 0 auto; }
+ul.hashTabs li{ background: none; display: inline-block; padding: 10px 15px; cursor: pointer; font-size: 2em; margin-right: 30px; }
+ul.hashTabs li:hover{ font-weight: bolder; color: #0056ff }
+ul.hashTabs li.hashcurrent{ font-weight: bolder; border-bottom: 2px solid #0056ff; }
+ul.hashTabs li.hashcurrent:before{ content: "#"; font-size: 1.3em; color: #0056ff}
+.hashtab-content{ display: none; margin-top: 20px; }
+.hashtab-content.hashcurrent{ display: inherit; display: flex; justify-content: space-between; flex-wrap: wrap; }
+.hashContentBox{ display: flex; justify-content: space-between; flex-wrap: wrap; overflow: hidden; align-content: center; }
+.hashContents{ border: 1px solid #dbdbdb; padding: 30px; margin-bottom: 20px; flex: 1 1 15%; margin-right: 20px; border-radius: 10px; line-height: 25px; }
+
+
+.anyangNotice{ width: 100%; margin: 0 auto; background: linear-gradient(#f1fdff, #fff); display: flex; justify-content: space-between; padding-top: 60px; }
+.anyangWrap{ max-width: 1220px; width: 100%; display: flex; justify-content: space-between; margin: 0 auto; }
+.anyangWrap > div{ width: 31%; }
+.notice1{ display: flex; flex-direction: column; justify-content: space-between; width: 100%; }
+.notice1 h1{ font-size: 2em; margin-bottom: 30px; }
+.notice1 div{ border: 1px solid #dbdbdb; background-color: white; margin-bottom: 30px; overflow: hidden; border-radius: 10px; }
+
+
+.footer{ width: 100%; background-color: #1d192f; }
+.footerWrap{ width: 100%; max-width: 1220px; margin: 0 auto; padding-top: 40px; }

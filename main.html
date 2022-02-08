@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>anyang</title>
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
+    <link rel="stylesheet" href="./css/anyang.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="upHeader">
+                <nav>
+                    <ul class="upHeaderFirst">
+                        <li>보건소</li>
+                        <li>시립도서관</li>
+                        <li>평생교육원</li>
+                        <li>안양시의회</li>
+                        <li>패밀리 웹사이트</li>
+                    </ul>
+                </nav>
+                <nav>
+                    <ul class="upHeaderSecond">
+                        <li>로그인</li>
+                        <li>회원가입</li>
+                        <li>
+                            <label>
+                                <select>
+                                    <option>ENGTrans</option>
+                                    <option>中国语</option>
+                                    <option>日本語</option>
+                                    <option>VIET</option>
+                                </select>
+                            </label>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="downHeader">
+                <div class="downNav">
+                    <img src="./img/logo.jpg">
+                    <div>
+                        <h5>안양소개</h5>
+                        <h5>시정소식</h5>
+                        <h5>시민참여</h5>
+                        <h5>전자민원</h5>
+                        <h5>정보공개</h5>
+                        <h5>분야별 정보</h5>
+                        <i class="material-icons">format_align_right</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- oftenMenu -->
+
+        <div class="oftenMenu">
+            <div class="oftenNav">
+                <h3>자주찾는<br/>
+                    <span>메뉴</span></h3>
+                <div class="coronafirst">
+                    <div><i class="material-icons">local_hospital</i></div>
+                    <p>코로나19현황</p>
+                </div>
+                <div>
+                    <div><i class="material-icons">house</i></div>
+                    <p>청사안내</p>
+                </div>
+                <div>
+                    <div><i class="material-icons">groups</i></div>
+                    <p>조직도</p>
+                </div>
+                <div>
+                    <div><i class="material-icons">webhook</i></div>
+                    <p>확진자 동선</p>
+                </div>
+                <div>
+                    <div><i class="material-icons">favorite</i></div>
+                    <p>안양사랑페이</p>
+                </div>
+                <div>
+                    <div><i class="material-icons">delete</i></div>
+                    <p>대형폐기물배출</p>
+                </div>
+                <div>
+                    <div><i class="material-icons">question_answer</i></div>
+                    <p>안양시에바란다</p>
+                </div>
+                <div>
+                    <div><i class="material-icons">park</i></div>
+                    <p>숲체험</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- middleContent -->
+
+
+        <div class="middleContent">
+            <img src="./img/202201181013488029UE6ZJ.jpg" style="width: 790px;">
+            <div class="middleRight">
+                <div>
+                    <input style="border: none" type="text" value="무엇을 찾고 계시나요?"/>
+                    <i class="material-icons">search</i>
+                </div>
+                <div class="hashtagSlide">
+                    <div><i class="material-icons">tag</i></div>
+                    <div class="hashtagText">
+                        <div><b>채용공고</b></div>
+                        <div><b>안심콜</b></div>
+                        <div><b>보건증</b></div>
+                        <div><b>대학생</b></div>
+                        <div><b>방역콜</b></div>
+                        <div><b>조직도</b></div>
+                        <div><b>폐기물</b></div>
+                    </div>
+                <div class="arrowSlider">
+                    <span class="prev" id="aro1_prev"><i class="material-icons">arrow_back_ios</i></span>
+                    <span class="prev" id="aro1_next"><i class="material-icons">arrow_forward_ios</i></span>
+                </div>
+                </div>
+
+
+                <!-- daegho side -->
+
+
+                <div class="daeho">
+                    <div class="daehoWrap">
+                        <b>안양시민과 함께하는</b>
+                        <br/>
+                        <b>안양시장 <span class="daehoName">최대호</span>입니다.</b>
+                        <p>소통시장실</p>
+                        <p>메니페스토(공약)</p>
+                        <p>안양행복1번가</p>
+                        <button type="button">정책제안</button>
+                        <button type="button">투표</button>
+                        <button type="button">설문조사</button>
+                    </div>
+                    <div class="daehoSns">
+                        <ul class="daehoList">
+                            <li>Facebook</li>
+                            <li>Instagram</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- noticeTab -->
+
+
+        <div class="noticeTab">
+            <div class="tabWrap">
+                <ul class="tabs">
+                    <li class="tab-link current" data-tab="tab-1">주요소식</li>
+                    <li class="tab-link" data-tab="tab-2">공지사항</li>
+                    <li class="tab-link" data-tab="tab-3">고시공고</li>
+                    <li class="tab-link" data-tab="tab-4">입찰공고</li>
+                    <li class="tab-link" data-tab="tab-5">채용공고</li>
+                    <li class="tab-link" data-tab="tab-6">보도자료</li>
+                </ul>
+                <p>더보기</p>
+            </div>
+
+
+            <div id="tab-1" class="tab-content current">
+                <ul class="contentBox">
+                    <li class="contents">
+                        <div><p>친환경자동차법 개정에 따른 과냍료 부과 대상 확대 알림</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>예비후보자 등록 안내 설명회 미개최에 따른 안내</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>어르신·장애인·거주불명등록자 등을 위한 선거정보 안내</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>경력단절여성 취업지원사업 디딤돌 동아리 모집</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>국외부재자신고인명부 이의(불복)신청 및 누락자 등재신청</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>「청년여성 세무회계사무원 양성과정」교육생 모집</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>2022년 안양시 평생학습동아리 지원 사업 공모</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>일상 속 탄소중립 실천이 혜택으로 돌아온다!「탄소중립 실천</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                </ul>
+            </div>
+            <div id="tab-2" class="tab-content">
+                <ul class="contentBox">
+                <li class="contents">
+                    <div><p>구리, 서울 개봉,양주,안성,이천지역 장애인특별공급 안내</p></div>
+                    <em>2022.02.07</em>
+                </li>
+                <li class="contents">
+                    <div><p>안양시민들에게 격려와 편리를...♡#3분안양 #3분안양35</p></div>
+                    <em>2022.02.07</em>
+                </li>
+                <li class="contents">
+                    <div><p>친환경자동차법 개정에 따른 과태료 부과대상 확대 알림</p></div>
+                    <em>2022.02.07</em>
+                </li>
+                <li class="contents">
+                    <div><p>2022년 1월말 기준 주민등록 인구현황입니다.</p></div>
+                    <em>2022.02.07</em>
+                </li>
+                <li class="contents">
+                    <div><p>2022년「경기도 공동주택 기술자문단」운영 및 기술자문 신청</p></div>
+                    <em>2022.02.07</em>
+                </li>
+                <li class="contents">
+                    <div><p>경기도 장애인 특별공급 모바일 알림서비스 안내</p></div>
+                    <em>2022.02.07</em>
+                </li>
+                <li class="contents">
+                    <div><p>2022년 장애아가족 양육지원사업 장애아 돌보미 모집 및 장</p></div>
+                    <em>2022.02.07</em>
+                </li>
+                <li class="contents">
+                    <div><p>평택 지제역 푸르지오 엘리아츠 및 평택 화양지구 휴먼빌 퍼</p></div>
+                    <em>2022.02.07</em>
+                </li>
+                </ul>
+            </div>
+            <div id="tab-3" class="tab-content">
+                <ul class="contentBox">
+                    <li class="contents">
+                        <div><p>친환경자동차법 개정에 따른 과냍료 부과 대상 확대 알림</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>예비후보자 등록 안내 설명회 미개최에 따른 안내</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>어르신·장애인·거주불명등록자 등을 위한 선거정보 안내</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>경력단절여성 취업지원사업 디딤돌 동아리 모집</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>국외부재자신고인명부 이의(불복)신청 및 누락자 등재신청</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>「청년여성 세무회계사무원 양성과정」교육생 모집</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>2022년 안양시 평생학습동아리 지원 사업 공모</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>일상 속 탄소중립 실천이 혜택으로 돌아온다!「탄소중립 실천</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                </ul>
+            </div>
+            <div id="tab-4" class="tab-content">
+                <ul class="contentBox">
+                    <li class="contents">
+                        <div><p>구리, 서울 개봉,양주,안성,이천지역 장애인특별공급 안내</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>안양시민들에게 격려와 편리를...♡#3분안양 #3분안양35</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>친환경자동차법 개정에 따른 과태료 부과대상 확대 알림</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>2022년 1월말 기준 주민등록 인구현황입니다.</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>2022년「경기도 공동주택 기술자문단」운영 및 기술자문 신청</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>경기도 장애인 특별공급 모바일 알림서비스 안내</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>2022년 장애아가족 양육지원사업 장애아 돌보미 모집 및 장</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>평택 지제역 푸르지오 엘리아츠 및 평택 화양지구 휴먼빌 퍼</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                </ul>
+            </div>
+            <div id="tab-5" class="tab-content">
+                <ul class="contentBox">
+                    <li class="contents">
+                        <div><p>친환경자동차법 개정에 따른 과냍료 부과 대상 확대 알림</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>예비후보자 등록 안내 설명회 미개최에 따른 안내</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>어르신·장애인·거주불명등록자 등을 위한 선거정보 안내</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>경력단절여성 취업지원사업 디딤돌 동아리 모집</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>국외부재자신고인명부 이의(불복)신청 및 누락자 등재신청</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>「청년여성 세무회계사무원 양성과정」교육생 모집</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>2022년 안양시 평생학습동아리 지원 사업 공모</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>일상 속 탄소중립 실천이 혜택으로 돌아온다!「탄소중립 실천</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                </ul>
+            </div>
+            <div id="tab-6" class="tab-content">
+                <ul class="contentBox">
+                    <li class="contents">
+                        <div><p>구리, 서울 개봉,양주,안성,이천지역 장애인특별공급 안내</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>안양시민들에게 격려와 편리를...♡#3분안양 #3분안양35</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>친환경자동차법 개정에 따른 과태료 부과대상 확대 알림</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>2022년 1월말 기준 주민등록 인구현황입니다.</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>2022년「경기도 공동주택 기술자문단」운영 및 기술자문 신청</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>경기도 장애인 특별공급 모바일 알림서비스 안내</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>2022년 장애아가족 양육지원사업 장애아 돌보미 모집 및 장</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                    <li class="contents">
+                        <div><p>평택 지제역 푸르지오 엘리아츠 및 평택 화양지구 휴먼빌 퍼</p></div>
+                        <em>2022.02.07</em>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- coronaTab -->
+
+
+        <div class="coronaTab">
+            <div class="coronaWrap">
+                <div class="coronaTitle">
+                    <div>
+                        <h1>안양시<span>코로나 19</span></h1>
+                        <p>2022. 2. 7. 08시 기준</p>
+                    </div>
+                    <div>
+                        <p>자세히</p>
+                        <i class="material-icons">add</i>
+                    </div>
+                </div>
+
+                <div class="coronaTable">
+                    <div class="coronaAlarm">
+                        <h3>상황알림</h3>
+                        <section>
+                            <p>확진</p>
+                            <p class="temp1">13,584</p>
+                            <p>+277</p>
+                        </section>
+                        <section>
+                            <p>퇴원</p>
+                            <p>13,584</p>
+                            <p>+277</p>
+                        </section>
+                        <section>
+                            <p>치료중</p>
+                            <p>13,584</p>
+                            <p>+277</p>
+                        </section>
+                        <section>
+                            <p>사망</p>
+                            <p>13,584</p>
+                            <p>+277</p>
+                        </section>
+                    </div>
+
+                    <div class="coronaAlarm">
+                        <h3>상황알림</h3>
+                        <section>
+                            <p>확진</p>
+                            <p>13,584</p>
+                            <p>+277</p>
+                        </section>
+                        <section>
+                            <p>퇴원</p>
+                            <p>13,584</p>
+                            <p>+277</p>
+                        </section>
+                        <section>
+                            <p>치료중</p>
+                            <p>13,584</p>
+                            <p>+277</p>
+                        </section>
+                        <section>
+                            <p>사망</p>
+                            <p>13,584</p>
+                            <p>+277</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- hashtag -->
+
+
+        <div class="hashTag">
+            <div class="hashTab">
+                    <ul class="hashTabs">
+                        <li class="tab-link hashcurrent" data-tab="hashtab-1"><span style="color: #0056ff">SNS</span>소식</li>
+                        <li class="tab-link" data-tab="hashtab-2">청년</li>
+                        <li class="tab-link" data-tab="hashtab-3">일자리</li>
+                        <li class="tab-link" data-tab="hashtab-4">관광</li>
+                    </ul>
+                </div>
+
+
+            <div id="hashtab-1" class="hashtab-content hashcurrent">
+                <ul class="hashContentBox">
+                    <li class="hashContents">
+                        <p>안양시민들에게 격려와 편리를</p>
+                        <p>안양시민들에게 격려와 편리를</p>
+                        <em>2022.02.03</em>
+
+                    </li>
+                    <li class="hashContents">천사를 기다리는 모든 예비 부모를 위해</li>
+                    <li class="hashContents">축구전용경기장 건립 타당성조사 및 기본계획수립</li>
+                    <li class="hashContents">안양 소식지</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- anyangnotice -->
+
+
+        <div class="anyangNotice">
+            <div class="anyangWrap">
+                <div class="notice1">
+                    <h1><span style="color: #3673c9">안양</span>알림</h1>
+                    <div><img style="width: 377px;" src="./img/20220204101021699SRKD6u.jpg"></div>
+                    <div><img style="width: 377px;" src="./img/20220204104412259EeKPGW.jpg"></div>
+                </div>
+                <div class="notice2">
+                    <h1>열린콜센터</h1>
+                </div>
+                <div class="notice3">
+                    <h1>유관기관소식</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+
+
+        <div class="footer">
+            <div class="footerWrap">
+                <div>
+                    <img src="./img/footer_logo.jpg">
+                    <input type="button" onclick="covid()" value="코비드" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="js/anyang.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.hashtagText').slick({
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                speed: 500,
+                prevArrow: $('#aro1_prev'),
+                nextArrow: $('#aro1_next'),
+                autoplaySpeed: 3000
+            });
+        });
+    </script>
+
+</body>
+</html>
