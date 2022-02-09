@@ -19,12 +19,12 @@
 .downNav > div > h5{ margin-right: 60px; font-size: 1.3em; }
 
 .oftenMenu{ background-color: #f3f4f8; }
-.oftenNav{ max-width: 1220px; margin: 0 auto; display: flex; justify-content: flex-start; align-items: center}
-.oftenNav > div{ margin-right: 50px; margin-top: 20px; text-align: center; margin-bottom: 30px; }
+.oftenNav{ max-width: 1220px; margin: 0 auto; display: flex; justify-content: flex-start; align-items: center; }
+.oftenNav > div{ margin-right: 50px; margin-top: 20px; text-align: center; margin-bottom: 30px; position: relative }
 .oftenNav > div > p{ font-size: 0.7em; font-weight: bolder }
 .oftenNav > div > div{ border: 1px solid white; padding: 28px; border-radius: 50px; background-color: white; margin-bottom: 10px; }
-.oftenNav > h3{ font-size: 1.4em; font-weight: bolder; margin-right: 20px; line-height: 30px; }
-.oftenNav > h3:after{content:''; position: absolute; width: 20px; height: 2px; top: 230px; left: 345px; background-color: #3d72fc; }
+.oftenNav h3{ font-size: 1.4em; font-weight: bolder; margin-right: 20px; line-height: 30px; text-align: left }
+.oftenNav h3:after{content:''; position: absolute; width: 20px; margin-top: 10px; height: 2px; top: 100%; left: 0; background-color: #3d72fc; }
 .oftenNav > div:hover > div> i{  color: white; transform: rotateY(360deg); transition: all 0.3s linear; }
 .oftenNav > div:hover > div{ background-color: #0056ff }
 .oftenNav > div:nth-child(2):hover > div{ background-color: #f02769 }
@@ -37,20 +37,24 @@
 .middleRight > div > input{ padding: 10px; color: grey; font-size: 1em; }
 .middleRight > div > i{ font-size: 2em; color: #0056ff; }
 
-.hashtagSlide{ display: flex; align-items: center; justify-content: space-between }
+.main-slide{ position: relative; }
+.slide-box{ background-color: rgba(22,30,77,0.85); width: 40%; border-radius: 10px; padding: 10px 0; position: absolute; top: 89% }
+.slide-box > span i{ color: white }
+
+.hashtagSlide{ display: flex; align-items: center; justify-content: space-between; overflow: hidden }
 .hashtagSlide > div > i{ font-size: 2em; color: #0056ff; }
 .hashtagText div b:after{ content: "|"; margin-left: 10px; color: #dbdbdb; }
 .hashtagText div b{ color: grey }
 
-.daeho{ height: 278px; overflow: hidden; position: relative; margin-top: 23px; border-radius: 10px; background-color: #f5f6fa; }
+.daeho{ height: 278px; overflow: hidden; position: relative; border-radius: 10px; background-color: #f5f6fa; }
 .daeho:before{ content: ""; bottom: -4px; right: -10px; position: absolute; width: 283px; height: 244px; background: url(../img/chief_img.jpg) no-repeat; background-size: contain; z-index: 1; }
-.daehoWrap{ margin-left: 20px; margin-top: 20px; }
+.daehoWrap{ margin-left: 20px; margin-top: 20px; overflow: hidden; }
 .daehoName{ font-size: 1.5em; font-weight: bolder; }
 .daehoSns{ position: absolute; left: 0; bottom: 0; width: 100%; height: 50px; padding: 10px 20px; background-color: #3673c9; font-size: 0; line-height: 0; box-sizing: border-box; }
 .daehoList > li{ float: left; width: 100px; height: 50px;  }
 
 .noticeTab{ max-width: 1220px; margin: 0 auto; }
-ul.tabs{ margin: 0; padding: 0; list-style: none; }
+ul.tabs{ margin: 0; padding: 0; list-style: none; position: relative }
 ul.tabs li{ background: none; display: inline-block; padding: 10px 15px; cursor: pointer; font-size: 1.5em; margin-right: 30px; }
 ul.tabs li:hover{ font-weight: bolder; border-bottom: 2px solid #0056ff; }
 ul.tabs li.current{ font-weight: bolder; border-bottom: 2px solid #0056ff; }
@@ -125,7 +129,6 @@ ul.hashTabs li.hashcurrent:before{ content: "#"; font-size: 1.3em; color: #0056f
 
 .bannersButton{ display: flex; justify-content: center; cursor: pointer; align-items: center; margin: 0 auto; width: 52px; height: 32px; padding: 0 10px; border-top-left-radius: 20px; border-top-right-radius: 20px; background-color: #dbdbdb;}
 .bannersButton > i{ font-size: 2em; color: #0056ff; transition: all 0.5s  }
-
 .banners{ width: 100%; background-color: #dbdbdb; display: none; }
 .buttonNow{ display: block; }
 
@@ -133,12 +136,24 @@ ul.hashTabs li.hashcurrent:before{ content: "#"; font-size: 1.3em; color: #0056f
 .bannersWrap h1{ display: flex; align-items: center; font-size: 1.2em; font-weight: bolder;}
 .bannersWrap > h1 > i{ margin-right: 20px; }
 .bannersWrap > div{ margin: 30px auto; }
-.bannerUl{  color: grey; }
+.bannerUl{  color: grey; overflow: hidden }
 .bannerUl>div:after{ content: 'º'; border-radius: 100%; margin-left: 10px; }
 
 
 .footer{ width: 100%; background-color: #1d192f; }
 .footerWrap{ width: 100%; max-width: 1220px; margin: 0 auto; padding: 40px 0; display: flex; justify-content: space-between; }
-.footerWrap:after{ content: '|'; color: grey }
-.foot2{ display: flex; flex-direction: column; justify-content: space-between; color: darkgrey }
+.foot2{ display: flex; flex-direction: column; justify-content: space-between; color: darkgrey; position: relative; }
+.foot2 p{ margin-bottom: 20px; display: flex; align-items: center; }
+.foot2 p:first-child:after{ content: "|"; color: grey; position: absolute; left: -30px;  }
+.foot3{ color: grey; position: relative }
+.foot3 p{ margin-bottom: 10px; }
+.foot3 p:first-child:before{ content: "|"; color: grey; position: absolute; left: -35px}
+.foot4-ul li{ color: white; float: left; margin-right: 30px; font-size: 1.3em; }
+.foot4{ position: relative }
+.foot4-ul:before{ position: absolute; content: "|"; left: -35px; color: grey }
+.foot4-ul li:first-child:hover{ color: #0056ff; background-color: white; padding:5px; border-radius: 50% }
+.foot4-ul li:nth-child(2):hover{ color: deepskyblue; background-color: white; padding:5px; border-radius: 50% }
+.foot4-ul li:nth-child(3):hover{ color: #f02769; background-color: white; padding:5px; border-radius: 50% }
+.foot4-ul li:nth-child(4):hover{ color: red; background-color: white; padding:5px; border-radius: 50% }
+.foot4-ul li:last-child:hover{ color: greenyellow; background-color: white; padding:5px; border-radius: 50% }
 

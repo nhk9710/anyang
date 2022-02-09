@@ -61,7 +61,7 @@ $(document).ready(function(){
         speed: 500,
         autoplaySpeed: 3000,
         prevArrow: $('.news-prev'),
-        nextArrow: $('.news_next')
+        nextArrow: $('.news-next')
     });
 
     $('.bannerUl').slick({
@@ -70,21 +70,32 @@ $(document).ready(function(){
         slidesToScroll: 3,
     });
 
+    $('.main-banner').slick({
+        infinite: true,
+        speed:500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: $('.main-prev'),
+        nextArrow: $('.main-next')
+    });
 
 
-    $('.play').click(function (){
 
-        if ($('.play').hasClass('.go')) {
-            $('.play').removeClass('.go').slick('slickPause');
+    $('.play').click((event)=>{
+        if ($('.play').hasClass('go')) {
+            $('.play').removeClass('go');
+            $('.news-slide').slick('slickPause');
         }else{
-            $('.play').addClass('go').slick('slickPlay');
+            $('.play').addClass('go');
+            $('.news-slide').slick('slickPlay');
         }
     });
 
 })
 
 let covid = async function(){
-    let ServiceKey= 'tgrquMVa46gZIWaEWSZue1Vja10fKnJguD%2FTs7z3y6hS1j47DxNZl7YS0oV%2BKuyDkMKRzpewR0BvZw2hnQNHZg%3D%3D';
+    let ServiceKey= '\t\n' +
+        'tgrquMVa46gZIWaEWSZue1Vja10fKnJguD/Ts7z3y6hS1j47DxNZl7YS0oV+KuyDkMKRzpewR0BvZw2hnQNHZg==';
     const endCreateDt = new Date();
 
 try {
