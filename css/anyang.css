@@ -3,15 +3,17 @@
 .header .upHeaderFirst > li:after{ content: "  ·";}
 .header .upHeaderFirst > li:last-child{ color: #0056ff}
 .header .upHeaderFirst > li:last-child:after{ content: "∨"; }
+.header .upHeaderFirst > li:hover{ border-bottom: 1px solid grey }
 .header .upHeaderSecond > li:after{ content: "·";}
 .header .upHeaderSecond > li:last-child:after{ content: "∨"}
+
 
 
 .upHeader{ display: flex; justify-content: space-between; margin: 0 auto; margin-top: 10px; max-width: 1220px; }
 .upHeader > nav > ul > li{ float: left; color: grey; margin-right: 5px; font-size: 0.9em; }
 
 
-.downHeader{ border-top: 1px solid #dbdbdb; margin-top: 10px; margin-bottom: 20px; }
+.downHeader{ margin-top: 10px; margin-bottom: 20px; }
 .downNav{ max-width: 1220px; margin: 0 auto; margin-top: 20px; display: flex; justify-content: space-between }
 .downNav > div{ display: flex; justify-content: space-around;  align-items: center; }
 .downNav > div > h5{ margin-right: 60px; font-size: 1.3em; }
@@ -83,12 +85,18 @@ ul.tabs li.current{ font-weight: bolder; border-bottom: 2px solid #0056ff; }
 .coronaAlarm section p:nth-child(2){ font-size: 1.3em; font-weight: bolder; }
 
 
+.vaccineAlarm{ display: flex; width: 48%; justify-content: space-between; border: 1px solid #cdd8fb; background-color: #f6fcff; border-radius: 10px; border-top-left-radius: 20px; overflow: hidden; align-items: center; }
+.vaccineAlarm > h3{ writing-mode: vertical-rl; text-orientation: upright; font-size: 1.8em;left: 0; margin: 0; padding: 30px; color: #3f61d1; background-color: white; }
+.vaccineAlarm section{ margin: 10px; height: 100%; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center}
+
+
 .hashTag{ max-width: 1220px; width: 100%; margin: 0 auto; margin-top: 30px; margin-bottom: 30px; }
 .hashTab{ max-width: 1220px; display: flex; margin: 0 auto; }
 ul.hashTabs{ margin: 0 auto; }
 ul.hashTabs li{ background: none; display: inline-block; padding: 10px 15px; cursor: pointer; font-size: 2em; margin-right: 30px; }
 ul.hashTabs li:hover{ font-weight: bolder; color: #0056ff }
-ul.hashTabs li.hashcurrent{ font-weight: bolder; border-bottom: 2px solid #0056ff; }
+ul.hashTabs li.hashcurrent{ font-weight: bolder; border-bottom: 2px solid #0056ff; color: #0056ff }
+ul.hashTabs li:first-child.hashcurrent{ text-decoration: none; }
 ul.hashTabs li.hashcurrent:before{ content: "#"; font-size: 1.3em; color: #0056ff}
 .hashtab-content{ display: none; margin-top: 20px; }
 .hashtab-content.hashcurrent{ display: inherit; display: flex; justify-content: space-between; flex-wrap: wrap; }
@@ -100,9 +108,37 @@ ul.hashTabs li.hashcurrent:before{ content: "#"; font-size: 1.3em; color: #0056f
 .anyangWrap{ max-width: 1220px; width: 100%; display: flex; justify-content: space-between; margin: 0 auto; }
 .anyangWrap > div{ width: 31%; }
 .notice1{ display: flex; flex-direction: column; justify-content: space-between; width: 100%; }
-.notice1 h1{ font-size: 2em; margin-bottom: 30px; }
+.notice1 h1{ font-size: 1.8em; font-weight: bolder; margin-bottom: 30px; }
 .notice1 div{ border: 1px solid #dbdbdb; background-color: white; margin-bottom: 30px; overflow: hidden; border-radius: 10px; }
+.notice2 h1{ font-size: 1.8em; font-weight: bolder; margin-bottom: 30px; }
+.notice2 .infoBox{ width: 100%; background-color: white; border: 1px solid #3673c9; display: flex; flex-direction: column; justify-content: space-evenly; border-radius: 5px; border-top-left-radius: 10px;}
+.info1{ display: flex; flex-direction: column; justify-content: space-around; border-bottom: 1px dotted black; margin: 0 10px; margin-top: 20px; padding: 0 10px; padding-top: 20px; }
+.info1 > div{ display: flex; justify-content: space-between; }
+.info2{ display: flex; flex-direction: column; justify-content: space-around; margin: 20px 10px; padding: 0 10px; padding-bottom: 10px;}
+.info2div{ display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.9em; padding-bottom: 8px; }
+.info2bold{ font-weight: bolder }
+.notice3 > div{ display: flex; justify-content: space-between; }
+.notice3 h1{ font-size: 1.8em; font-weight: bolder; margin-bottom: 30px; }
+.slick-button i{ font-size: 0.9em; font-weight: bolder; }
+.news-slide  div  img{ width: 100%; border-radius: 10px; overflow: hidden;}
+
+
+.bannersButton{ display: flex; justify-content: center; cursor: pointer; align-items: center; margin: 0 auto; width: 52px; height: 32px; padding: 0 10px; border-top-left-radius: 20px; border-top-right-radius: 20px; background-color: #dbdbdb;}
+.bannersButton > i{ font-size: 2em; color: #0056ff; transition: all 0.5s  }
+
+.banners{ width: 100%; background-color: #dbdbdb; display: none; }
+.buttonNow{ display: block; }
+
+.bannersWrap{ max-width: 1220px; display: flex; margin: 0 auto; width: 100%; justify-content: space-between;  align-items: center; }
+.bannersWrap h1{ display: flex; align-items: center; font-size: 1.2em; font-weight: bolder;}
+.bannersWrap > h1 > i{ margin-right: 20px; }
+.bannersWrap > div{ margin: 30px auto; }
+.bannerUl{  color: grey; }
+.bannerUl>div:after{ content: 'º'; border-radius: 100%; margin-left: 10px; }
 
 
 .footer{ width: 100%; background-color: #1d192f; }
-.footerWrap{ width: 100%; max-width: 1220px; margin: 0 auto; padding-top: 40px; }
+.footerWrap{ width: 100%; max-width: 1220px; margin: 0 auto; padding: 40px 0; display: flex; justify-content: space-between; }
+.footerWrap:after{ content: '|'; color: grey }
+.foot2{ display: flex; flex-direction: column; justify-content: space-between; color: darkgrey }
+

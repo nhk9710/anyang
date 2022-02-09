@@ -20,6 +20,67 @@ $(document).ready(function(){
         $("#"+tab_id).addClass('hashcurrent');
     })
 
+    $('.bannersButton').click(function (){
+
+
+        if($('.banners').hasClass('buttonNow')){
+            this.querySelector('i').style.transform='rotate(0)'
+            $('.banners').removeClass('buttonNow')
+        }else{
+            this.querySelector('i').style.transform='rotateX(180deg)'
+            $('.banners').addClass('buttonNow')
+        }
+    })
+
+    /*let vaccine = async function(){
+        try{
+            await axios({
+                url: `https://nip.kdca.go.kr/irgd/cov19stats.do?list=all`,
+                method: 'GET',
+            }).then(res => {
+                console.log(res);
+
+            })
+        }
+    }*/
+/*=============slide============================*/
+    $('.hashtagText').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        speed: 500,
+        prevArrow: $('#aro1_prev'),
+        nextArrow: $('#aro1_next'),
+        autoplaySpeed: 3000
+    });
+
+    $('.news-slide').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 500,
+        autoplaySpeed: 3000,
+        prevArrow: $('.news-prev'),
+        nextArrow: $('.news_next')
+    });
+
+    $('.bannerUl').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+    });
+
+
+
+    $('.play').click(function (){
+
+        if ($('.play').hasClass('.go')) {
+            $('.play').removeClass('.go').slick('slickPause');
+        }else{
+            $('.play').addClass('go').slick('slickPlay');
+        }
+    });
+
 })
 
 let covid = async function(){
