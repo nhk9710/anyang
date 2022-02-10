@@ -24,10 +24,10 @@
 .introduce1{ background-color: #effbfe; position: relative; padding: 30px 90px 390px 100px; border-bottom-right-radius: 20px }
 .introduce1_depth1{ font-weight: 400; font-size: 1.7em; }
 .introduce1_depth1:after{ position: absolute; content: ''; width:50px; height: 2px; top: 70px; left: 105px; background-color: black;}
-.introduce2{ margin-left: 50px; display: flex; justify-content: space-between }
-.introduce2 div{ margin-top: 40px; position: relative; }
-.introduce2_title{ font-size: 1.1em; font-weight: 500}
-.introduce2_title:after{ position: absolute; content: ''; width: 30px; height: 2px; background-color: black; }
+.introduce2{ margin-left: 50px; display: flex; justify-content: space-between; }
+.introduce2 div{ margin-top: 40px; position: relative; width: 300px  }
+.introduce2_title{ font-size: 1.1em; font-weight: 500; margin-bottom: 20px;}
+.introduce2_title:after{ position: absolute; content: ''; width: 260px; height: 2px; top: 30px; left: 1px; background-color: black; }
 .introduce2_title:first-child{ margin-bottom: 20px; }
 .indepth{ margin-top: 70px; }
 .indepth p{ margin-bottom: 10px; font-weight: 600;}
