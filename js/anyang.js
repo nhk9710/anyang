@@ -32,17 +32,6 @@ $(document).ready(function(){
         }
     })
 
-    /*let vaccine = async function(){
-        try{
-            await axios({
-                url: `https://nip.kdca.go.kr/irgd/cov19stats.do?list=all`,
-                method: 'GET',
-            }).then(res => {
-                console.log(res);
-
-            })
-        }
-    }*/
 /*=============slide============================*/
     $('.hashtagText').slick({
         infinite: true,
@@ -91,34 +80,38 @@ $(document).ready(function(){
         }
     });
 
+    covid();
 })
 
 let covid = async function(){
-    let ServiceKey= '\t\n' +
+    let ServiceKey=
         'tgrquMVa46gZIWaEWSZue1Vja10fKnJguD/Ts7z3y6hS1j47DxNZl7YS0oV+KuyDkMKRzpewR0BvZw2hnQNHZg==';
     const endCreateDt = new Date();
 
-try {
-    await axios({
-        url: `http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson`,
-        method: 'GET',
-        params: {
-            ServiceKey,
-            pageNo: 1,
-            numOfRows: 10,
-            startCreateDt: 20200310,
-            endCreateDt
-        },
-    }).then(res => {
-        console.log(res);
-        // document.write(JSON.stringify(res));
-        document.querySelector('.coronaTable > .coronaAlarm .temp1').innterText = res?.DECIDE_CNT
-    })
-} catch (err) {
-    console.log(err);
-    throw new Error(err);
-}
+    try {
+        await axios({
+            url: `http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson`,
+            method: 'GET',
+            params: {
+                ServiceKey,
+                pageNo: 1,
+                numOfRows: 10,
+                startCreateDt: 20211231,
+                endCreateDt
+            },
+        }).then(res => {
+            console.log(res.data.response.body.items.item);
+            // document.write(JSON.stringify(res));
+            const data = res.data.response.body.items.item;
+            document.querySelector('.temp1').innerText = data?.decideCnt||'';
+            document.querySelector('.dead_cnt').innerText = data?.deathCnt||'';
+        })
+    } catch (err) {
+        console.log(err);
+        throw new Error(err);
+    }
 };
+
 
 
 

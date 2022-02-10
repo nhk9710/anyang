@@ -1,6 +1,6 @@
 .wrap{ width: 100%; height: 100%; margin: 0 auto; }
 .header{ width: 100%;  margin: 0 auto; }
-.header .upHeaderFirst > li:after{ content: "  ·";}
+.header .upHeaderFirst > li::after{ content: "  ·";}
 .header .upHeaderFirst > li:last-child{ color: #0056ff}
 .header .upHeaderFirst > li:last-child:after{ content: "∨"; }
 .header .upHeaderFirst > li:hover{ border-bottom: 1px solid grey }
@@ -9,14 +9,31 @@
 
 
 
-.upHeader{ display: flex; justify-content: space-between; margin: 0 auto; margin-top: 10px; max-width: 1220px; }
+.upHeader{ display: flex; justify-content: space-between; margin: 10px auto 0; max-width: 1220px;  }
 .upHeader > nav > ul > li{ float: left; color: grey; margin-right: 5px; font-size: 0.9em; }
 
 
 .downHeader{ margin-top: 10px; margin-bottom: 20px; }
-.downNav{ max-width: 1220px; margin: 0 auto; margin-top: 20px; display: flex; justify-content: space-between }
-.downNav > div{ display: flex; justify-content: space-around;  align-items: center; }
-.downNav > div > h5{ margin-right: 60px; font-size: 1.3em; }
+.downNav{ max-width: 1220px; margin: 20px auto 0; display: flex; justify-content: space-between }
+.downNav > div > ul{ display: flex; justify-content: space-around;  align-items: center; }
+.downNav > div > ul > li > h5{ margin-right: 60px; font-size: 1.3em; }
+
+#main-menu{ position: relative }
+#main-menu > li:hover .sub-menu{ opacity: 1; visibility: visible; }
+.sub-menu{ position: absolute; display: flex; justify-content: flex-start; background-color: white; opacity: 0; box-shadow:  1px 5px 10px 1px #dbdbdb; visibility: hidden; transition: all 0.4s ease-in; z-index: 5;left: -648px; top: 57px; width: 1901px;}
+.introduce1{ background-color: #effbfe; position: relative; padding: 30px 90px 390px 100px; border-bottom-right-radius: 20px }
+.introduce1_depth1{ font-weight: 400; font-size: 1.7em; }
+.introduce1_depth1:after{ position: absolute; content: ''; width:50px; height: 2px; top: 70px; left: 105px; background-color: black;}
+.introduce2{ margin-left: 50px; display: flex; justify-content: space-between }
+.introduce2 div{ margin-top: 40px; position: relative; }
+.introduce2_title{ font-size: 1.1em; font-weight: 500}
+.introduce2_title:after{ position: absolute; content: ''; width: 30px; height: 2px; background-color: black; }
+.introduce2_title:first-child{ margin-bottom: 20px; }
+.indepth{ margin-top: 70px; }
+.indepth p{ margin-bottom: 10px; font-weight: 600;}
+
+
+
 
 .oftenMenu{ background-color: #f3f4f8; }
 .oftenNav{ max-width: 1220px; margin: 0 auto; display: flex; justify-content: flex-start; align-items: center; }
@@ -29,7 +46,7 @@
 .oftenNav > div:hover > div{ background-color: #0056ff }
 .oftenNav > div:nth-child(2):hover > div{ background-color: #f02769 }
 
-.middleContent{ max-width: 1220px; margin: 0 auto; margin-top: 40px; display: flex; justify-content: space-between;}
+.middleContent{ max-width: 1220px; margin: 40px auto 0; display: flex; justify-content: space-between;}
 .middleContent > img{ border-radius: 10px; }
 .middleRight{ width: 400px; }
 .middleRight > div:first-child{ display: flex; border: 3px solid #0613cc; border-radius: 10px; padding: 10px; justify-content: space-between; }
@@ -38,6 +55,9 @@
 .middleRight > div > i{ font-size: 2em; color: #0056ff; }
 
 .main-slide{ position: relative; }
+.main-img{ border-radius: 10px; }
+.main-prev{ cursor: pointer }
+.main-next{ cursor: pointer }
 .slide-box{ background-color: rgba(22,30,77,0.85); width: 40%; border-radius: 10px; padding: 10px 0; position: absolute; top: 89% }
 .slide-box > span i{ color: white }
 
@@ -49,9 +69,25 @@
 .daeho{ height: 278px; overflow: hidden; position: relative; border-radius: 10px; background-color: #f5f6fa; }
 .daeho:before{ content: ""; bottom: -4px; right: -10px; position: absolute; width: 283px; height: 244px; background: url(../img/chief_img.jpg) no-repeat; background-size: contain; z-index: 1; }
 .daehoWrap{ margin-left: 20px; margin-top: 20px; overflow: hidden; }
+.daehoWrap > b{ font-weight: bolder; font-size: 1.1em; color: #1d192f }
 .daehoName{ font-size: 1.5em; font-weight: bolder; }
 .daehoSns{ position: absolute; left: 0; bottom: 0; width: 100%; height: 50px; padding: 10px 20px; background-color: #3673c9; font-size: 0; line-height: 0; box-sizing: border-box; }
-.daehoList > li{ float: left; width: 100px; height: 50px;  }
+.daehoList > li{ float: left; width: 100px; height: 50px; position: absolute; z-index: 4; border: 1px solid black; color: black;  }
+.daeho-festo{ display: flex; justify-content: flex-start; margin-top: 10px; color: grey; margin-bottom: 10px; position: relative }
+.daeho-festo > span{ margin-left: 30px; cursor:pointer; z-index: 3; }
+.daeho-festo > span:hover{ font-weight: bolder; color: dimgrey }
+.daeho-festo > span:after{ content: ""; width: 10px; height: 2px; left: 111px; top: 22px; background-color: #0056ff; position: absolute; transition: all 0.3s ease-in; }
+.daeho-festo > span:hover:after{ width: 120px; background-color: #0056ff }
+.daeho-festo > p{ cursor: pointer }
+.daeho-festo > p:hover{ font-weight: bolder; color: dimgrey }
+.daeho-festo > p:after{ content: ""; width: 10px; height: 2px; left: 1px; top: 22px; background-color: #0056ff; position: absolute; transition: all 0.3s ease-in; }
+.daeho-festo > p:hover:after{ width: 80px; background-color: #0056ff }
+.daeho-happy{ color: grey; margin-top: 16px; cursor: pointer}
+.daeho-happy:after{ content: ""; width: 10px; height: 2px; left: 22px; top: 130px; background-color: #0056ff; position: absolute; transition: all 0.3s ease-in; }
+.daeho-happy:hover:after{ width: 100px; }
+.btn-wrap{ margin-top: 25px;}
+.btn-wrap button{ background-color: #3673c9; border-radius: 4px; border: none; color: white; padding: 2px;  }
+.btn-wrap button:hover{ background-color:#1d192f; font-weight: 700;  }
 
 .noticeTab{ max-width: 1220px; margin: 0 auto; }
 ul.tabs{ margin: 0; padding: 0; list-style: none; position: relative }
@@ -82,19 +118,20 @@ ul.tabs li.current{ font-weight: bolder; border-bottom: 2px solid #0056ff; }
 .coronaAlarm{ display: flex; width: 48%; justify-content: space-between; border: 1px solid #f6dae3; background-color: #fdf6fa; border-radius: 10px; border-top-left-radius: 20px; overflow: hidden; align-items: center; }
 .coronaAlarm > h3{ writing-mode: vertical-rl; text-orientation: upright; font-size: 1.8em;left: 0; margin: 0; padding: 30px; color: #f02769; background-color: white; }
 .coronaAlarm section{ margin: 10px; height: 100%; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center}
-.coronaAlarm section p:nth-child(2):before{ content:''; position: absolute; width: 10px; height: 2px; top: 1390px; left: 506px; background-color: #f02769; }
-.coronaAlarm section p:nth-child(3):before{ content:''; position: absolute; width: 10px; height: 2px; top: 1390px; left: 630px; background-color: rebeccapurple; }
-.coronaAlarm section p:nth-child(4):before{ content:''; position: absolute; width: 10px; height: 2px; top: 1390px; left: 700px; background-color: #0056ff; }
-.coronaAlarm section p:nth-child(5):before{ content:''; position: absolute; width: 10px; height: 2px; top: 1390px; left: 806px; background-color: #f02769; }
 .coronaAlarm section p:nth-child(2){ font-size: 1.3em; font-weight: bolder; }
 
+.alarm1,.alarm2,.alarm3,.alarm4{ position: relative; }
+.confirmed:after{ content: ''; position: absolute; width: 10px; height: 2px; top: 70px; left: 33px; background-color: #f02769; margin-bottom: 20px;  }
+.discharge:after{ content: ''; position: absolute; width: 10px; height: 2px; top: 70px; left: 30px; background-color: blueviolet; margin-bottom: 20px;  }
+.cure:after{ content: ''; position: absolute; width: 10px; height: 2px; top: 70px; left: 30px; background-color: #3d72fc; margin-bottom: 20px;  }
+.dead:after{ content: ''; position: absolute; width: 10px; height: 2px; top: 70px; left: 20px; background-color: black; margin-bottom: 20px;  }
 
 .vaccineAlarm{ display: flex; width: 48%; justify-content: space-between; border: 1px solid #cdd8fb; background-color: #f6fcff; border-radius: 10px; border-top-left-radius: 20px; overflow: hidden; align-items: center; }
 .vaccineAlarm > h3{ writing-mode: vertical-rl; text-orientation: upright; font-size: 1.8em;left: 0; margin: 0; padding: 30px; color: #3f61d1; background-color: white; }
 .vaccineAlarm section{ margin: 10px; height: 100%; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center}
 
 
-.hashTag{ max-width: 1220px; width: 100%; margin: 0 auto; margin-top: 30px; margin-bottom: 30px; }
+.hashTag{ max-width: 1220px; width: 100%; margin: 30px auto; }
 .hashTab{ max-width: 1220px; display: flex; margin: 0 auto; }
 ul.hashTabs{ margin: 0 auto; }
 ul.hashTabs li{ background: none; display: inline-block; padding: 10px 15px; cursor: pointer; font-size: 2em; margin-right: 30px; }
