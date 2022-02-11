@@ -152,11 +152,13 @@ ul.tabs li.current{ font-weight: bolder; border-bottom: 2px solid #0056ff; }
 
 
 .contentBox{ display: flex; justify-content: space-between; flex-wrap: wrap; overflow: hidden; align-content: center; }
-.contents{ border: 1px solid #dbdbdb; padding: 30px; margin-bottom: 20px; flex: 1 1 15%; margin-right: 20px; border-radius: 10px; line-height: 25px; }
+.contents{ border: 1px solid #dbdbdb; padding: 30px; margin-bottom: 20px; flex: 1 1 20%; margin-right: 20px; border-radius: 10px; line-height: 25px; }
 .contents em{ float: right; color: grey; margin-top: 20px; }
 .contents:hover{ cursor: pointer; border: 1px solid #0056ff; box-shadow: 5px 5px 5px 5px #dbdbdb }
 .contents:nth-child(4){ margin-right: 0; }
 .contents:nth-child(8){ margin-right: 0; }
+
+
 .coronaTab{ background-color: #f1f8ff; margin-top: 20px; padding-top: 30px; padding-bottom: 30px; }
 .coronaWrap{ max-width: 1220px; margin: 0 auto; }
 .coronaTitle{ display: flex; justify-content: space-between; margin-top: 30px; align-items: center; }
