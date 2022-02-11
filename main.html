@@ -34,10 +34,25 @@
                     <span class="main-next drag-unable"><i class="material-icons">arrow_forward_ios</i></span>
                     <p class="c_page" style="color: white; width: 20px; height: 20px; top: 13px; left: 20px; position: absolute; z-index: 6;"></p>
                     <p style="color: white; width: 20px; height: 20px; top: 13px; left: 34px; position: absolute; z-index: 6;">/3</p>
-                    <p style="color: white;  top: 13px; left: 220px; position: absolute; z-index: 6;"><i class="bi bi-ui-radios-grid"></i></p>
-                    <p style="color: white;  top: 13px; left: 250px; position: absolute; z-index: 6;">모아보기</p>
+                    <p style="color: white; cursor: pointer; top: 13px; left: 220px; position: absolute; z-index: 6;"><i class="bi bi-ui-radios-grid"></i></p>
+                    <p class="view-modal" style="color: white; cursor: pointer; top: 13px; left: 250px; position: absolute; z-index: 6;" onclick="showModal()">모아보기</p>
                 </div>
 
+            </div>
+
+            <div id="modal" class="modal-overlay">
+                <div class="modal-window">
+                    <div class="title">
+                        <h2>모달</h2>
+                    </div>
+                    <div class="close-area" onclick="modalOff()">X</div>
+                    <div class="content">
+                        <p>가나다라마바사 아자차카타파하</p>
+                        <p>가나다라마바사 아자차카타파하</p>
+                        <p>가나다라마바사 아자차카타파하</p>
+                        <p>가나다라마바사 아자차카타파하</p>
+                    </div>
+                </div>
             </div>
 
             <div class="middleRight">
@@ -222,6 +237,29 @@
             );});
             $('footer').load("./html/footer.html");
 
+        })
+
+        const modal = document.getElementById("modal")
+        function showModal() {
+            modal.style.display = "flex"
+        }
+        function modalOff() {
+            modal.style.display = "none"
+        }
+        const closeBtn = modal.querySelector(".close-area")
+        closeBtn.addEventListener("click", e => {
+            modalOff()
+        })
+        modal.addEventListener("click", e => {
+            const evTarget = e.target
+            if(evTarget.classList.contains("modal-overlay")) {
+                modalOff()
+            }
+        })
+        window.addEventListener("keyup", e => {
+            if(showModal() && e.key === "Escape") {
+                modalOff()
+            }
         })
 
 

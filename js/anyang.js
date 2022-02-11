@@ -95,6 +95,7 @@ $(document).ready(function(){
     covid();
 })
 
+
 let covid = async function(){
     let ServiceKey=
         'tgrquMVa46gZIWaEWSZue1Vja10fKnJguD/Ts7z3y6hS1j47DxNZl7YS0oV+KuyDkMKRzpewR0BvZw2hnQNHZg==';
