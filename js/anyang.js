@@ -71,7 +71,6 @@ $(document).ready(function(){
     $('.main-banner').on('afterChange', (event, slick, currentSlide) => {
         /*console.log(currentSlide);*/
         const hok2 = currentSlide+1;
-        console.log(hok2);
         document.querySelector('.c_page').textContent = hok2;
     });
 
@@ -89,7 +88,6 @@ $(document).ready(function(){
 
 
    function hotest(){
-        console.log(1);
         this.querySelector('.hiddenNav').style.opacity=1;
         this.querySelector('.hiddenNav').style.height='100px';
     }
