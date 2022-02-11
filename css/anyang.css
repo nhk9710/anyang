@@ -2,7 +2,7 @@
 .header{ width: 100%;  margin: 0 auto; }
 .header .upHeaderFirst > li:last-child{ color: #0056ff}
 
-.upHeaderFirst > li{  display: inline-block; position: relative; margin-right: 10px; }
+.upHeaderFirst > li{  display: inline-block; position: relative; margin-right: 10px; cursor: pointer; }
 .upHeaderFirst > li:before{ content: ''; position: absolute; left: 50%; bottom: 0; top: 30px; width: 0; height: 1px; background-color: grey; transition: all 0.2s ease-in }
 .upHeaderFirst > li:after{ content: ''; position: absolute; right: 50%; bottom: 0; top: 30px; width: 0; height: 1px; background-color: grey; transition: all 0.2s ease-in }
 .upHeaderFirst > li:hover:after{ width: 50%; z-index: 6; }
@@ -10,7 +10,7 @@
 .upHeaderFirst > li:last-child:hover:after{ content: none }
 .upHeaderFirst > li:last-child:hover:before{ content: none }
 
-.upHeaderSecond li{ display: inline-block; position: relative; margin-right: 10px; }
+.upHeaderSecond li{ display: inline-block; position: relative; margin-right: 10px; cursor: pointer; }
 .upHeaderSecond > li:before{ content: ''; position: absolute; left: 50%; bottom: 0; top: 30px; width: 0; height: 1px; background-color: grey; transition: all 0.2s ease-in }
 .upHeaderSecond > li:after{ content: ''; position: absolute; right: 50%; bottom: 0; top: 30px; width: 0; height: 1px; background-color: grey; transition: all 0.2s ease-in }
 .upHeaderSecond > li:hover:after{ width: 50%; z-index: 6; }
@@ -32,8 +32,8 @@
 #main-menu{ position: relative; }
 #main-menu li{  cursor: pointer; }
 .main-nav{  display: inline-block; position: relative; }
-.main-nav:before{ content: ''; position: absolute; left: 50%; bottom: 0; top: 55px; width: 0; height: 3px; background-color: #0613cc; transition: all 0.2s ease-in }
-.main-nav:after{ content: ''; position: absolute; right: 50%; bottom: 0; top: 55px; width: 0; height: 3px; background-color: #0613cc; transition: all 0.2s ease-in }
+.main-nav:before{ content: ''; position: absolute; left: 50%; bottom: 0; top: 50px; width: 0; height: 3px; background-color: #0056ff; transition: all 0.1s ease-in }
+.main-nav:after{ content: ''; position: absolute; right: 50%; bottom: 0; top: 50px; width: 0; height: 3px; background-color: #0056ff; transition: all 0.1s ease-in }
 .main-nav:hover:after{ width: 50%; z-index: 6; }
 .main-nav:hover:before{ width: 50%; z-index: 6; }
 .main-nav:last-child:after{ content: none; }
@@ -58,11 +58,14 @@
 .oftenNav > div{ margin-right: 50px; margin-top: 20px; text-align: center; margin-bottom: 30px; position: relative }
 .oftenNav > div > p{ font-size: 0.7em; font-weight: bolder }
 .oftenNav > div > div{ border: 1px solid white; padding: 28px; border-radius: 50px; background-color: white; margin-bottom: 10px; }
+.oftenNav > div > div i{ color: #0056ff }
+.oftenNav > div:nth-child(2) i{ color: #f02769 }
 .oftenNav h3{ font-size: 1.4em; font-weight: bolder; margin-right: 20px; line-height: 30px; text-align: left }
 .oftenNav h3:after{content:''; position: absolute; width: 20px; margin-top: 10px; height: 2px; top: 100%; left: 0; background-color: #3d72fc; }
 .oftenNav > div:hover > div> i{  color: white; transform: rotateY(360deg); transition: all 0.3s linear; }
 .oftenNav > div:hover > div{ background-color: #0056ff }
 .oftenNav > div:nth-child(2):hover > div{ background-color: #f02769 }
+.often-icon{ cursor: pointer }
 
 .middleContent{ max-width: 1220px; margin: 40px auto 0; display: flex; justify-content: space-between;}
 .middleContent > img{ border-radius: 10px; }
@@ -104,7 +107,7 @@
 .daeho-happy:after{ content: ""; width: 10px; height: 2px; left: 22px; top: 130px; background-color: #0056ff; position: absolute; transition: all 0.3s ease-in; }
 .daeho-happy:hover:after{ width: 100px; }
 .btn-wrap{ margin-top: 25px;}
-.btn-wrap button{ background-color: #3673c9; border-radius: 4px; border: none; color: white; padding: 2px;  }
+.btn-wrap button{ background-color: #3673c9; border-radius: 4px; border: none; color: white; padding: 2px; cursor: pointer  }
 .btn-wrap button:hover{ background-color:#1d192f; font-weight: 700;  }
 
 .noticeTab{ max-width: 1220px; margin: 0 auto; }
@@ -118,8 +121,8 @@ ul.tabs li.current{ font-weight: bolder; border-bottom: 2px solid #0056ff; }
 
 
 .tab-link{  display: inline-block; position: relative; }
-.tab-link:before{ content: ''; position: absolute; left: 50%; bottom: 0; top: 44px; width: 0; height: 2px; background-color: #0056ff; transition: all 0.3s ease-in }
-.tab-link:after{ content: ''; position: absolute; right: 50%; bottom: 0; top: 44px; width: 0; height: 2px; background-color: #0056ff; transition: all 0.3s ease-in }
+.tab-link:before{ content: ''; position: absolute; left: 50%; bottom: 0; top: 44px; width: 0; height: 2px; background-color: #0056ff; transition: all 0.1s ease-in }
+.tab-link:after{ content: ''; position: absolute; right: 50%; bottom: 0; top: 44px; width: 0; height: 2px; background-color: #0056ff; transition: all 0.1s ease-in }
 .tab-link:hover:after{ width: 50%; z-index: 6; }
 .tab-link:hover:before{ width: 50%; z-index: 6; }
 
@@ -131,7 +134,6 @@ ul.tabs li.current{ font-weight: bolder; border-bottom: 2px solid #0056ff; }
 .contents:hover{ cursor: pointer; border: 1px solid #0056ff; box-shadow: 5px 5px 5px 5px #dbdbdb }
 .contents:nth-child(4){ margin-right: 0; }
 .contents:nth-child(8){ margin-right: 0; }
-
 .coronaTab{ background-color: #f1f8ff; margin-top: 20px; padding-top: 30px; padding-bottom: 30px; }
 .coronaWrap{ max-width: 1220px; margin: 0 auto; }
 .coronaTitle{ display: flex; justify-content: space-between; margin-top: 30px; align-items: center; }
@@ -168,9 +170,12 @@ ul.hashTabs li.hashcurrent{ font-weight: bolder; border-bottom: 2px solid #0056f
 ul.hashTabs li:first-child.hashcurrent{ text-decoration: none; }
 ul.hashTabs li.hashcurrent:before{ content: "#"; font-size: 1.3em; color: #0056ff}
 .hashtab-content{ display: none; margin-top: 20px; }
-.hashtab-content.hashcurrent{ display: inherit; display: flex; justify-content: space-between; flex-wrap: wrap; }
-.hashContentBox{ display: flex; justify-content: space-between; flex-wrap: wrap; overflow: hidden; align-content: center; }
-.hashContents{ border: 1px solid #dbdbdb; padding: 30px; margin-bottom: 20px; flex: 1 1 15%; margin-right: 20px; border-radius: 10px; line-height: 25px; }
+.hashtab-content.hashcurrent{ display: flex; justify-content: space-between; flex-wrap: wrap; }
+.hashContentBox{ display: flex; justify-content: space-between; flex-wrap: wrap; align-content: center; }
+.hashContents{ font-family: 'Book Antiqua'; border: 1px solid #dbdbdb; cursor: pointer; position: relative; padding: 20px; margin-bottom: 20px; flex: 1 1 15%; margin-right: 20px; border-radius: 10px; line-height: 25px; }
+.hashContents:after{ position: absolute; content: '+'; border: 1px solid #dbdbdb; text-align: center; font-size: 1.1em; transition: all 0.2s ease-in; font-weight: bolder; color: #0056ff; width: 27px; height: 27px; border-radius: 10px 10px 0 10px; bottom: 0; background-color: white; top: -12%; left: 249px; }
+.hashContents:hover:after{ background-color: #0056ff;color: white; }
+.hashContents:before{ position: absolute; content: "\f344"; font-family: 'Glyphicons Halflings'; text-align: center; font-size: 1.1em; transition: all 0.2s ease-in; font-weight: bolder; width: 27px; height: 27px; border-radius: 50px; bottom: 0; background-color: white; top: -12%; left: 0 }
 
 
 .anyangNotice{ width: 100%; margin: 0 auto; background: linear-gradient(#f1fdff, #fff); display: flex; justify-content: space-between; padding-top: 60px; }
