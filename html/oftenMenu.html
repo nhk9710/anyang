@@ -44,6 +44,42 @@
             <p>숲체험</p>
         </div>
     </div>
+    <div class="hiddenNav on">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="often-icon">
+            <div><i class="material-icons">delete</i></div>
+            <p>대형폐기물배출</p>
+        </div>
+        <div class="often-icon">
+            <div><i class="material-icons">question_answer</i></div>
+            <p>안양시에바란다</p>
+        </div>
+        <div class="often-icon">
+            <div><i class="material-icons">park</i></div>
+            <p>숲체험</p>
+        </div>
+    </div>
+    <div  class="hidden-button drag-unable" onclick="hotest()"><p>+</p></div>
 </div>
+
+<script>
+    function hotest(){
+
+        if($('.hiddenNav').hasClass('on')){
+            document.querySelector('.hiddenNav').style.opacity=1;
+            document.querySelector('.hiddenNav').style.height='100px';
+            document.querySelector('p').innerText= "-";
+            $('.hiddenNav').removeClass('on')
+        }else{
+            document.querySelector('.hiddenNav').style.opacity=0;
+            document.querySelector('.hiddenNav').style.height='0';
+            document.querySelector('p').innerText= "+";
+            $('.hiddenNav').addClass('on')
+        }
+
+    }
+</script>
 </body>
 </html>

@@ -53,7 +53,22 @@
 
 
 
-.oftenMenu{ background-color: #f3f4f8; }
+.oftenMenu{ background-color: #f3f4f8; position: relative; }
+.hiddenNav{ max-width: 1220px; margin: 0 auto; padding-bottom: 35px; display: flex; justify-content: flex-start; align-items: center; transition: all 0.15s linear; height: 0; opacity: 0; }
+.hiddenNav > div{ margin-left: 2px; margin-right: 50px; margin-top: 20px; text-align: center; margin-bottom: 30px; position: relative }
+.hiddenNav > div > p{ font-size: 0.7em; font-weight: bolder }
+.hiddenNav > div > div{ border: 1px solid white; padding: 28px; border-radius: 50px; background-color: white; margin-bottom: 10px; }
+.hiddenNav > div > div i{ color: #0056ff }
+.hiddenNav > div:nth-child(2) i{ color: #f02769 }
+.hiddenNav h3{ font-size: 1.4em; font-weight: bolder; margin-right: 20px; line-height: 30px; text-align: left }
+.hiddenNav h3:after{content:''; position: absolute; width: 20px; margin-top: 10px; height: 2px; top: 100%; left: 0; background-color: #3d72fc; }
+.hiddenNav > div:hover > div> i{  color: white; transform: rotateY(360deg); transition: all 0.25s linear; }
+.hiddenNav > div:hover > div{ background-color: #0056ff }
+.hiddenNav > div:nth-child(2):hover > div{ background-color: #f02769 }
+
+.hidden-button{ position: absolute; cursor: pointer; top: 92%; left: 50%; border: none;  width: 70px; height: 35px; text-align: center; color: #0056ff; font-size: 1.5em; font-weight: bolder; border-radius: 0 0 30px 30px; background-color: #f3f4f8; }
+
+/*.hiddenNav:after{ position: absolute; content: '+'; width: 70px; height: 35px; color: #0056ff; font-size: 1.5em; font-weight: bolder; border-radius: 0 0 30px 30px; background-color: #f3f4f8; left: 50%; top: 92%; text-align: center; }*/
 .oftenNav{ max-width: 1220px; margin: 0 auto; display: flex; justify-content: flex-start; align-items: center; }
 .oftenNav > div{ margin-right: 50px; margin-top: 20px; text-align: center; margin-bottom: 30px; position: relative }
 .oftenNav > div > p{ font-size: 0.7em; font-weight: bolder }
@@ -62,7 +77,7 @@
 .oftenNav > div:nth-child(2) i{ color: #f02769 }
 .oftenNav h3{ font-size: 1.4em; font-weight: bolder; margin-right: 20px; line-height: 30px; text-align: left }
 .oftenNav h3:after{content:''; position: absolute; width: 20px; margin-top: 10px; height: 2px; top: 100%; left: 0; background-color: #3d72fc; }
-.oftenNav > div:hover > div> i{  color: white; transform: rotateY(360deg); transition: all 0.3s linear; }
+.oftenNav > div:hover > div> i{  color: white; transform: rotateY(360deg); transition: all 0.25s linear; }
 .oftenNav > div:hover > div{ background-color: #0056ff }
 .oftenNav > div:nth-child(2):hover > div{ background-color: #f02769 }
 .often-icon{ cursor: pointer }
@@ -79,7 +94,7 @@
 .main-img{ border-radius: 10px; }
 .main-prev{ cursor: pointer }
 .main-next{ cursor: pointer }
-.slide-box{ background-color: rgba(22,30,77,0.85); width: 40%; border-radius: 10px; padding: 10px 0; position: absolute; top: 89% }
+.slide-box{ background-color: rgba(22,30,77,0.85); width: 40%; border-radius: 10px; padding: 10px 0; position: absolute; top: 89%; text-align: center; }
 .slide-box > span i{ color: white }
 
 .hashtagSlide{ display: flex; align-items: center; justify-content: space-between; overflow: hidden }

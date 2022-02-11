@@ -68,6 +68,13 @@ $(document).ready(function(){
         nextArrow: $('.main-next')
     });
 
+    $('.main-banner').on('afterChange', (event, slick, currentSlide) => {
+        /*console.log(currentSlide);*/
+        const hok2 = currentSlide+1;
+        console.log(hok2);
+        document.querySelector('.c_page').textContent = hok2;
+    });
+
 
 
     $('.play').click((event)=>{
@@ -79,6 +86,13 @@ $(document).ready(function(){
             $('.news-slide').slick('slickPlay');
         }
     });
+
+
+   function hotest(){
+        console.log(1);
+        this.querySelector('.hiddenNav').style.opacity=1;
+        this.querySelector('.hiddenNav').style.height='100px';
+    }
 
     covid();
 })
@@ -103,8 +117,8 @@ let covid = async function(){
             console.log(res.data.response.body.items.item);
             // document.write(JSON.stringify(res));
             const data = res.data.response.body.items.item;
-            document.querySelector('.temp1').innerText = data?.decideCnt||'';
-            document.querySelector('.dead_cnt').innerText = data?.deathCnt||'';
+            document.querySelector('.temp1').innerHTML = data?.decideCnt||'';
+            document.querySelector('.dead_cnt').innerHTML = data?.deathCnt||'';
         })
     } catch (err) {
         console.log(err);
@@ -112,22 +126,4 @@ let covid = async function(){
     }
 };
 
-
-
-
-/*var xhr = new XMLHttpRequest();
-var url = 'http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson'; /!*URL*!/
-var queryParams = '?' + encodeURIComponent('serviceKey') + '='+'sviskwvob7iqWy+KPRYjuAiZJjOcf+38yPEtk7IyXaY7Iq1ryM836T3TKfJQaMk8eL3gJf9NLp4/TrpumRsPnA=='; /!*Service Key*!/
-queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /!**!/
-queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('10'); /!**!/
-queryParams += '&' + encodeURIComponent('startCreateDt') + '=' + encodeURIComponent('20200310'); /!**!/
-queryParams += '&' + encodeURIComponent('endCreateDt') + '=' + encodeURIComponent('20200315'); /!**!/
-xhr.open('GET', url + queryParams);
-xhr.onreadystatechange = function () {
-    if (this.readyState == 4) {
-        alert('Status: '+this.status+'nHeaders: '+JSON.stringify(this.getAllResponseHeaders())+'nBody: '+this.responseText);
-    }
-};
-
-xhr.send('');*/
 
