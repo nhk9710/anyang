@@ -1,15 +1,26 @@
 .wrap{ width: 100%; height: 100%; margin: 0 auto; }
 .header{ width: 100%;  margin: 0 auto; }
-.header .upHeaderFirst > li::after{ content: "  ·";}
 .header .upHeaderFirst > li:last-child{ color: #0056ff}
-.header .upHeaderFirst > li:last-child:after{ content: "∨"; }
-.header .upHeaderFirst > li:hover{ border-bottom: 1px solid grey }
-.header .upHeaderSecond > li:after{ content: "·";}
-.header .upHeaderSecond > li:last-child:after{ content: "∨"}
 
+.upHeaderFirst > li{  display: inline-block; position: relative; margin-right: 10px; }
+.upHeaderFirst > li:before{ content: ''; position: absolute; left: 50%; bottom: 0; top: 30px; width: 0; height: 1px; background-color: grey; transition: all 0.2s ease-in }
+.upHeaderFirst > li:after{ content: ''; position: absolute; right: 50%; bottom: 0; top: 30px; width: 0; height: 1px; background-color: grey; transition: all 0.2s ease-in }
+.upHeaderFirst > li:hover:after{ width: 50%; z-index: 6; }
+.upHeaderFirst > li:hover:before{ width: 50%; z-index: 6; }
+.upHeaderFirst > li:last-child:hover:after{ content: none }
+.upHeaderFirst > li:last-child:hover:before{ content: none }
 
+.upHeaderSecond li{ display: inline-block; position: relative; margin-right: 10px; }
+.upHeaderSecond > li:before{ content: ''; position: absolute; left: 50%; bottom: 0; top: 30px; width: 0; height: 1px; background-color: grey; transition: all 0.2s ease-in }
+.upHeaderSecond > li:after{ content: ''; position: absolute; right: 50%; bottom: 0; top: 30px; width: 0; height: 1px; background-color: grey; transition: all 0.2s ease-in }
+.upHeaderSecond > li:hover:after{ width: 50%; z-index: 6; }
+.upHeaderSecond > li:hover:before{ width: 50%; z-index: 6; }
+.upHeaderSecond > li:last-child:hover:after{ content: none }
+.upHeaderSecond > li:last-child:hover:before{ content: none }
 
-.upHeader{ display: flex; justify-content: space-between; margin: 10px auto 0; max-width: 1220px;  }
+.in-header{ display: flex; justify-content: space-between; margin: 10px auto 0; max-width: 1220px; }
+.upHeader{ position: relative; }
+.upHeader:before{ content: ""; width: 100%; height: 1px; top: 30px; background-color: #dbdbdb; position: absolute; }
 .upHeader > nav > ul > li{ float: left; color: grey; margin-right: 5px; font-size: 0.9em; }
 
 
@@ -21,8 +32,8 @@
 #main-menu{ position: relative; }
 #main-menu li{  cursor: pointer; }
 .main-nav{  display: inline-block; position: relative; }
-.main-nav:before{ content: ''; position: absolute; left: 50%; bottom: 0; top: 55px; width: 0; height: 3px; background-color: #0613cc; transition: all 0.3s ease-in }
-.main-nav:after{ content: ''; position: absolute; right: 50%; bottom: 0; top: 55px; width: 0; height: 3px; background-color: #0613cc; transition: all 0.3s ease-in }
+.main-nav:before{ content: ''; position: absolute; left: 50%; bottom: 0; top: 55px; width: 0; height: 3px; background-color: #0613cc; transition: all 0.2s ease-in }
+.main-nav:after{ content: ''; position: absolute; right: 50%; bottom: 0; top: 55px; width: 0; height: 3px; background-color: #0613cc; transition: all 0.2s ease-in }
 .main-nav:hover:after{ width: 50%; z-index: 6; }
 .main-nav:hover:before{ width: 50%; z-index: 6; }
 .main-nav:last-child:after{ content: none; }
@@ -99,12 +110,21 @@
 .noticeTab{ max-width: 1220px; margin: 0 auto; }
 ul.tabs{ margin: 0; padding: 0; list-style: none; position: relative }
 ul.tabs li{ background: none; display: inline-block; padding: 10px 15px; cursor: pointer; font-size: 1.5em; margin-right: 30px; }
-ul.tabs li:hover{ font-weight: bolder; border-bottom: 2px solid #0056ff; }
 ul.tabs li.current{ font-weight: bolder; border-bottom: 2px solid #0056ff; }
 .tabWrap{ display: flex; justify-content: space-between; align-items: center; margin-top: 30px; border-bottom: 1px solid #dbdbdb }
 .tabWrap p{ color: #0056ff }
 .tab-content{ display: none; margin-top: 20px; }
-.tab-content.current{ display: inherit; display: flex; justify-content: space-between; flex-wrap: wrap; }
+.tab-content.current{ display: flex; justify-content: space-between; flex-wrap: wrap; }
+
+
+.tab-link{  display: inline-block; position: relative; }
+.tab-link:before{ content: ''; position: absolute; left: 50%; bottom: 0; top: 44px; width: 0; height: 2px; background-color: #0056ff; transition: all 0.3s ease-in }
+.tab-link:after{ content: ''; position: absolute; right: 50%; bottom: 0; top: 44px; width: 0; height: 2px; background-color: #0056ff; transition: all 0.3s ease-in }
+.tab-link:hover:after{ width: 50%; z-index: 6; }
+.tab-link:hover:before{ width: 50%; z-index: 6; }
+
+
+
 .contentBox{ display: flex; justify-content: space-between; flex-wrap: wrap; overflow: hidden; align-content: center; }
 .contents{ border: 1px solid #dbdbdb; padding: 30px; margin-bottom: 20px; flex: 1 1 15%; margin-right: 20px; border-radius: 10px; line-height: 25px; }
 .contents em{ float: right; color: grey; margin-top: 20px; }
