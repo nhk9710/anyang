@@ -20,17 +20,7 @@ $(document).ready(function(){
         $("#"+tab_id).addClass('hashcurrent');
     })
 
-    $('.bannersButton').click(function (){
 
-
-        if($('.banners').hasClass('buttonNow')){
-            this.querySelector('i').style.transform='rotate(0)'
-            $('.banners').removeClass('buttonNow')
-        }else{
-            this.querySelector('i').style.transform='rotateX(180deg)'
-            $('.banners').addClass('buttonNow')
-        }
-    })
 
 /*=============slide============================*/
     $('.hashtagText').slick({
@@ -38,9 +28,8 @@ $(document).ready(function(){
         slidesToShow: 4,
         slidesToScroll: 1,
         speed: 500,
-        prevArrow: $('#aro1_prev'),
-        nextArrow: $('#aro1_next'),
-        autoplaySpeed: 3000
+        prevArrow: $('.hash-prev'),
+        nextArrow: $('.hash-next')
     });
 
     $('.news-slide').slick({
@@ -55,8 +44,10 @@ $(document).ready(function(){
 
     $('.bannerUl').slick({
         infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        prevArrow: $('.banner-prev'),
+        nextArrow: $('.banner-next')
     });
 
     $('.main-banner').slick({
@@ -64,6 +55,7 @@ $(document).ready(function(){
         speed:500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        autoplaySpeed: 1000,
         prevArrow: $('.main-prev'),
         nextArrow: $('.main-next')
     });
@@ -76,7 +68,7 @@ $(document).ready(function(){
 
 
 
-    $('.play').click((event)=>{
+    $('.play').click(function(){
         if ($('.play').hasClass('go')) {
             $('.play').removeClass('go');
             $('.news-slide').slick('slickPause');
@@ -86,11 +78,17 @@ $(document).ready(function(){
         }
     });
 
+    $('.banner_play').click(function(){
+        if ($('.banner_play').hasClass('go')) {
+            $('.banner_play').removeClass('go');
+            $('.banner-slide').slick('slickPause');
+        }else{
+            $('.banner_play').addClass('go');
+            $('.banner-slide').slick('slickPlay');
+        }
+    });
 
-   function hotest(){
-        this.querySelector('.hiddenNav').style.opacity=1;
-        this.querySelector('.hiddenNav').style.height='100px';
-    }
+
 
     covid();
 })
@@ -114,10 +112,13 @@ let covid = async function(){
             },
         }).then(res => {
             console.log(res.data.response.body.items.item);
-            // document.write(JSON.stringify(res));
             const data = res.data.response.body.items.item;
-            document.querySelector('.temp1').innerHTML = data?.decideCnt||'';
-            document.querySelector('.dead_cnt').innerHTML = data?.deathCnt||'';
+            const d1 = data?.decideCnt;
+            const d2 = data?.deathCnt;
+            const decide = d1.toLocaleString('ko-KR');
+            const death = d2.toLocaleString('ko-KR');
+            document.querySelector('.temp1').innerHTML = decide||'';
+            document.querySelector('.dead_cnt').innerHTML = death||'';
         })
     } catch (err) {
         console.log(err);

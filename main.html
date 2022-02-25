@@ -40,19 +40,22 @@
 
             </div>
 
-            <div id="modal" class="modal-overlay">
-                <div class="modal-window">
-                    <div class="title">
-                        <h2>모달</h2>
-                    </div>
-                    <div class="close-area" onclick="modalOff()">X</div>
-                    <div class="content">
-                        <p>가나다라마바사 아자차카타파하</p>
-                        <p>가나다라마바사 아자차카타파하</p>
-                        <p>가나다라마바사 아자차카타파하</p>
-                        <p>가나다라마바사 아자차카타파하</p>
+            <div class="modal-wrap">
+                <div id="modal" class="modal-overlay">
+                    <div class="modal-window">
+                        <div class="title">
+                            <h2>안양시 팝업 홍보존</h2>
+                        </div>
+                        <div class="close-area" onclick="modalOff()">X</div>
+                        <div class="content">
+                            <p>가나다라마바사 아자차카타파하</p>
+                            <p>가나다라마바사 아자차카타파하</p>
+                            <p>가나다라마바사 아자차카타파하</p>
+                            <p>가나다라마바사 아자차카타파하</p>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
             <div class="middleRight">
@@ -71,10 +74,11 @@
                         <div><b>조직도</b></div>
                         <div><b>폐기물</b></div>
                     </div>
-                <div class="arrowSlider">
-                    <span class="prev" id="aro1_prev"><i class="material-icons">arrow_back_ios</i></span>
-                    <span class="prev" id="aro1_next"><i class="material-icons">arrow_forward_ios</i></span>
-                </div>
+                    <div>
+                        <span class="hash-prev"><i class="material-icons">arrow_back_ios</i></span>
+                        <b class="hash_play"><i class="material-icons">play_arrow</i></b>
+                        <span class="hash-next"><i class="material-icons">arrow_forward_ios</i></span>
+                    </div>
                 </div>
 
 
@@ -92,9 +96,9 @@
                         </div>
                         <p class="daeho-happy">안양행복1번가</p>
                         <div class="btn-wrap" style="position: relative">
-                            <button type="button">정책제안</button>
+                            <button type="button" style="margin-right: 10px">정책제안</button>
                             <button type="button">투표</button>
-                            <button type="button" style="position: absolute; left: 30%; z-index: 6;">설문조사</button>
+                            <button type="button" style="position: absolute; left: 30%; z-index: 3;">설문조사</button>
                         </div>
                     </div>
                     <div class="daeho_sns_list" style="position: relative">
@@ -133,79 +137,176 @@
             <div id="hashtab-1" class="hashtab-content hashcurrent">
                 <ul class="hashContentBox">
                     <li class="hashContents">
-                        <p>안양시민들에게 격려와 편리를</p>
-                        <p>안양시민들에게 격려와 편리를</p>
+                        <p>청년들에게 격려와 편리를</p>
+                        <p>청년시민들에게 격려와 편리를</p>
                         <em>2022.02.03</em>
 
                     </li>
-                    <li class="hashContents">천사를 기다리는 모든 예비 부모를 위해</li>
-                    <li class="hashContents">축구전용경기장 건립 타당성조사 및 기본계획수립</li>
-                    <li class="hashContents">안양 소식지</li>
+                    <li class="hashContents">
+                        <p>천사를 기다리는 모든 예비 부모를 위해</p>
+                        <em>2022.02.03</em>
+                    </li>
+                    <li class="hashContents">
+                        <p>축구전용경기장 건립 타당성조사 및 기본계획수립</p>
+                        <em>2022.02.03</em>
+                    </li>
+                    <li class="hashContents">
+                        <p>안양 소식지</p>
+                        <em>2022.02.03</em>
+                    </li>
                 </ul>
             </div>
 
             <div id="hashtab-2" class="hashtab-content">
                 <ul class="hashContentBox">
                     <li class="hashContents">
-                        <p>안양시민들에게 격려와 편리를</p>
-                        <p>안양시민들에게 격려와 편리를</p>
+                        <p>청년 창업 펀드</p>
                         <em>2022.02.03</em>
 
                     </li>
-                    <li class="hashContents">천사를 기다리는 모든 예비 부모를 위해</li>
-                    <li class="hashContents">축구전용경기장 건립 타당성조사 및 기본계획수립</li>
-                    <li class="hashContents">안양 소식지</li>
+                    <li class="hashContents">
+                        <p>인터레스트 지원사업</p>
+                        <em>2022.02.03</em>
+                    </li>
+                    <li class="hashContents">
+                        <p>범계역 청년출구</p>
+                        <em>2022.02.03</em>
+                    </li>
+                    <li class="hashContents">
+                        <p>안양시 청년정책</p>
+                        <em>2022.02.03</em>
+                    </li>
                 </ul>
             </div>
 
             <div id="hashtab-3" class="hashtab-content">
                 <ul class="hashContentBox">
                     <li class="hashContents">
-                        <p>안양시민들에게 격려와 편리를</p>
-                        <p>안양시민들에게 격려와 편리를</p>
+                        <p>안양맨투맨컨설팅</p>
                         <em>2022.02.03</em>
 
                     </li>
-                    <li class="hashContents">천사를 기다리는 모든 예비 부모를 위해</li>
-                    <li class="hashContents">축구전용경기장 건립 타당성조사 및 기본계획수립</li>
-                    <li class="hashContents">안양 소식지</li>
+                    <li class="hashContents">
+                        <p>AI/VR 면접체험</p>
+                        <em>2022.02.03</em>
+                    </li>
+                    <li class="hashContents">
+                        <p>안양청년옷장</p>
+                        <em>2022.02.03</em>
+                    </li>
+                    <li class="hashContents">
+                        <p>안양시 일자리정책</p>
+                        <em>2022.02.03</em>
+                    </li>
                 </ul>
             </div>
 
             <div id="hashtab-4" class="hashtab-content">
                 <ul class="hashContentBox">
                     <li class="hashContents">
-                        <p>안양시민들에게 격려와 편리를</p>
-                        <p>안양시민들에게 격려와 편리를</p>
+                        <p>안양 9경</p>
+                        <p>17년만에 재지정된 안양</p>
                         <em>2022.02.03</em>
 
                     </li>
-                    <li class="hashContents">천사를 기다리는 모든 예비 부모를 위해</li>
-                    <li class="hashContents">축구전용경기장 건립 타당성조사 및 기본계획수립</li>
-                    <li class="hashContents">안양 소식지</li>
+                    <li class="hashContents">
+                        <p>안양예술공원</p>
+                        <em>2022.02.03</em>
+                    </li>
+                    <li class="hashContents">
+                        <p>APAP 트리엔날레</p>
+                        <em>2022.02.03</em>
+                    </li>
+                    <li class="hashContents">
+                        <p>공공예술 VR여행</p>
+                        <em>2022.02.03</em>
+                    </li>
                 </ul>
             </div>
         </div>
 
 
         <!-- anyangnotice -->
-        <section id="anyang-notice"></section>
+        <!--<section id="anyang-notice"></section>-->
+        <div class="anyangNotice">
+            <div class="anyangWrap">
+                <div class="notice1">
+                    <h1><span style="color: #3673c9">안양</span>알림</h1>
+                    <div><img style="width: 377px;" src="./img/20220204101021699SRKD6u.jpg"></div>
+                    <div><img style="width: 377px;" src="./img/20220204104412259EeKPGW.jpg"></div>
+                </div>
+                <div class="notice2">
+                    <h1>열린<span style="color: #3673c9">콜센터</span></h1>
+                    <div class="infoBox">
+                        <div class="info1">
+                            <div>
+                                <span style="font-size: 1.2em; font-weight: bold;">평일 주간<br/>
+                                    <span style="color: grey; font-weight: normal">(09-18시)</span></span>
+                                <p style="color: grey; font-size: 2em; font-weight: bolder">031-8045-7000</p>
+                            </div>
+
+                            <p style="font-size: 0.9em; margin: 20px auto;">※평일 야간 및 주말·공휴일은 당직실로 연결됩니다.</p>
+                        </div>
+                        <div class="info2">
+                            <div class="info2div">
+                                <p class="info2bold">카카오톡 상담</p>
+                                <p>카카오톡 채널 '안양시 열린콜센터'</p>
+                            </div>
+                            <div class="info2div">
+                                <p class="info2bold">팩스 상담</p>
+                                <p>031-8045-6500</p>
+                            </div>
+                            <div class="info2div">
+                                <p class="info2bold">이메일 상담</p>
+                                <p>anyangcallcenter@korea.kr</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="notice3">
+                    <div>
+                        <h1>유관기관소식</h1>
+
+                        <div class="slick-button">
+                            <span class="news-prev"><i class="material-icons">arrow_back_ios</i></span>
+                            <b class="play"><i class="material-icons">play_arrow</i></b>
+                            <span class="news-next"><i class="material-icons">arrow_forward_ios</i></span>
+                        </div>
+                    </div>
+
+                    <div class="news-slide">
+                        <div><img src="./img/1.jpg" alt="no image"></div>
+                        <div><img src="./img/2.jpg" alt="no image"></div>
+                        <div><img src="./img/3.jpg" alt="no image"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- banners -->
         <div class="bannersButton drag-unable"><i class="material-icons">keyboard_arrow_up</i></div>
         <div class="banners">
             <div class="bannersWrap">
-                <h1><i class="material-icons">home</i>배너모음</h1>
-                    <div class="bannerUl">
-                        <div>문서24</div>
-                        <div>경기도옴부즈만</div>
-                        <div>공유누리</div>
-                        <div>정부/지자체 조직도</div>
-                        <div>경기도민생범죄통계</div>
-                        <div>당번약국</div>
-                        <div>정부24</div>
-                    </div>
-                <p>hello</p>
+                <div>
+                    <h1><i class="material-icons">home</i>배너모음</h1>
+                </div>
+                <div class="bannerUl">
+                    <div>문서24</div>
+                    <div>경기도옴부즈만</div>
+                    <div>공유누리</div>
+                    <div>정부/지자체 조직도</div>
+                    <div>경기도민생범죄통계</div>
+                    <div>당번약국</div>
+                    <div>정부24</div>
+                    <div>위택스</div>
+                    <div>성범죄자 알림e</div>
+                </div>
+                <div>
+                    <span class="banner-prev" style="cursor: pointer"><i class="material-icons">arrow_back_ios</i></span>
+                    <b class="banner_play"><i class="material-icons">play_arrow</i></b>
+                    <span class="banner-next" style="cursor: pointer"><i class="material-icons">arrow_forward_ios</i></span>
+                </div>
             </div>
         </div>
 
@@ -216,7 +317,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="js/anyang.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="slick/slick.js"></script>
 
     <script>
         $(document).ready(() => {
@@ -225,17 +326,19 @@
             $('#notice-tab').load("./html/noticeTab.html");
             $('#corona-tab').load("./html/coronaTab.html");
             $('#hashtag-tab').load("./html/hashtagTab.html");
-            $('#anyang-notice').load("./html/anyangNotice.html", function(){$('.news-slide').slick({
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                speed: 500,
-                autoplaySpeed: 3000,
-                prevArrow: $('.news-prev'),
-                nextArrow: $('.news-next')
-                }
-            );});
+            $('#anyang-notice').load("./html/anyangNotice.html");
             $('footer').load("./html/footer.html");
+
+            $('.bannersButton').click(function (){
+
+                if($('.banners').hasClass('buttonNow')){
+                    this.querySelector('i').style.transform='rotate(0)'
+                    $('.banners').removeClass('buttonNow')
+                }else{
+                    this.querySelector('i').style.transform='rotateX(180deg)'
+                    $('.banners').addClass('buttonNow')
+                }
+            })
 
         })
 
@@ -256,12 +359,6 @@
                 modalOff()
             }
         })
-        window.addEventListener("keyup", e => {
-            if(showModal() && e.key === "Escape") {
-                modalOff()
-            }
-        })
-
 
 
         function goup(){
